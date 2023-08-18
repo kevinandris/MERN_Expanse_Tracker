@@ -18,7 +18,7 @@ import bg from './img/bg.png'
 import { MainLayout } from "./styles/Layout";
 import Orb from "./Components/Orb/Orbs";
 import Navigation from "./Components/Navigation/Navigation";
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Income from "./Components/Incomes/Incomes";
 import Expenses from "./Components/Expenses/Expenses";

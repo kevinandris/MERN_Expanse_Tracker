@@ -1,3 +1,21 @@
+// ! 1
+/* 
+   ! 1) dependencies installed FOR BACKEND:
+   - express
+   - cors
+   - dotenv
+   - nodemon
+   - mongoose
+
+   ! 2) how to start the backend server: 
+   - on terminal type: npm start
+
+   ! 3) the scripts inside package.json must be changed to the example below using nodemon:
+   "scripts": {
+    "start": "nodemon app.js"
+    },
+*/
+
 require ('dotenv').config()
 const express = require('express')
 const cors = require('cors')

@@ -1,3 +1,4 @@
+// ! 4
 const IncomeModel = require("../models/IncomeModel.js")
 
 // ! To create an income to MongoDB --  using postman type: POST

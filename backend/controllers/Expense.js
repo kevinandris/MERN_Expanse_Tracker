@@ -1,3 +1,4 @@
+// ! 4
 const ExpenseModel = require("../models/ExpenseModel.js")
 
 // ! To create an expense to MongoDB -- using postman type: POST
@@ -35,8 +36,8 @@ exports.addExpense = async (req, res) => {
 // ! To get all expense from MongoDB -- using postman type:GET
 exports.getExpenses = async (req, res) => {
     try {
-        const incomes = await ExpenseModel.find().sort({createdAt: -1})
-        res.status(200).json(incomes)
+        const expenses = await ExpenseModel.find().sort({createdAt: -1})
+        res.status(200).json(expenses)
     } catch (error) {
         res.status(500).json({message: 'Server Error'})
     }
@@ -47,7 +48,7 @@ exports.deleteExpense = async (req, res) => {
     const { id } = req.params;
 
     ExpenseModel.findByIdAndDelete(id)
-        .then((income) => {
+        .then((expense) => {
             res.status(200).json({message: 'Expense Deleted'})
         })
         .catch((err) => {

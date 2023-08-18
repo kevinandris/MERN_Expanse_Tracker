@@ -12,9 +12,9 @@ export const GlobalProvider = ({children}) => {
     const [expenses, setExpenses] = useState([])
     const [error, setError] = useState(null)
 
-    // ! calculate INCOMES -- send some data
+    // ! INCOMES FUNCTIONS -- send some data
     const addIncome = async (income) => {
-        const response = await axios.post(`${BASE_URL}add-income`, income)
+        await axios.post(`${BASE_URL}add-income`, income)
             .catch((err) => {
                 setError(err.response.data.message)
             })
@@ -30,13 +30,13 @@ export const GlobalProvider = ({children}) => {
     }
 
     const deleteIncome = async (id) => {
-        const res = await axios.delete(`${BASE_URL}delete-income/${id}`)
+        await axios.delete(`${BASE_URL}delete-income/${id}`)
 
         // calling getIncomes to prevent endless data sending for the backend
         getIncomes()
     }
 
-    // TOTAL INCOME function
+    // ! TOTAL INCOME function
     const theTotalIncome = () => {
         let totalIncome = 0;
         incomes.forEach((income) => {
@@ -48,9 +48,9 @@ export const GlobalProvider = ({children}) => {
 
     // ======================================================================== //
 
-    // ! calculate EXPENSES -- send some data
+    // !  EXPENSES FUNCTIONS -- send some data
     const addExpense = async (income) => {
-        const response = await axios.post(`${BASE_URL}add-expense`, income)
+        await axios.post(`${BASE_URL}add-expense`, income)
             .catch((err) => {
                 setError(err.response.data.message)
             })
@@ -66,7 +66,7 @@ export const GlobalProvider = ({children}) => {
     }
 
     const deleteExpense = async (id) => {
-        const res = await axios.delete(`${BASE_URL}delete-expense/${id}`)
+        await axios.delete(`${BASE_URL}delete-expense/${id}`)
 
         // calling getIncomes to prevent endless data sending for the backend
         getExpenses()
