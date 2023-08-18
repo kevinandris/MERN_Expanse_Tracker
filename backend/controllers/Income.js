@@ -13,11 +13,12 @@ exports.addIncome = async (req, res) => {
     })
 
     try {
-        // ! if input is empty
+        // * if input is empty
         if (!title || !category || !description || !date ) {
             return res.status(400).json({message: 'All fields are required!'})
         }
 
+        // * if amount field is below or equal to zero or not a number
         if (amount <= 0 || !amount === 'number') {
             return res.status(400).json({message: 'Amount must be a positive number!'})
         }
@@ -31,9 +32,7 @@ exports.addIncome = async (req, res) => {
     console.log(income)
 }
 
-const IncomeSchema = require("../models/IncomeModel")
-
-// ! To get all income from MongoDB using postman
+// ! To get all income from MongoDB -- using postman: type: GET
 exports.getIncomes = async (req, res) => {
     try {
         const incomes = await IncomeModel.find().sort({createdAt: -1})
@@ -43,7 +42,7 @@ exports.getIncomes = async (req, res) => {
     }
 }
 
-// ! To delete an income in the database -- using postman type:POST
+// ! To delete an income in MongoDB -- using postman type: POST
 exports.deleteIncome = async (req, res) => {
     const { id } = req.params;
 

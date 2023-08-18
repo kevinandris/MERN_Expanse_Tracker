@@ -12,7 +12,7 @@ const PORT = process.env.PORT
 app.use(express.json())
 app.use(cors())
 
-// ! routes
+// ! routes -- using readdirSync to access the routes' folder
 readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
 
 const server = () => {

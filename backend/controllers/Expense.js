@@ -1,10 +1,10 @@
-const IncomeModel = require("../models/IncomeModel.js")
+const ExpenseModel = require("../models/ExpenseModel.js")
 
-// ! To create an expense to MongoDB --  using postman type: POST
+// ! To create an expense to MongoDB -- using postman type: POST
 exports.addExpense = async (req, res) => {
     const { title, amount, category, description, date } = req.body
 
-    const expense = IncomeModel({
+    const expense = ExpenseModel({
         title,
         amount,
         category,
@@ -18,12 +18,13 @@ exports.addExpense = async (req, res) => {
             return res.status(400).json({message: 'All fields are required!'})
         }
 
+        // * if amount field is below or equal to zero or not a number
         if (amount <= 0 || !amount === 'number') {
             return res.status(400).json({message: 'Amount must be a positive number!'})
         }
 
         await expense.save()
-        res.status(200).json({message: 'Income Added'})
+        res.status(200).json({message: 'Expense Added'})
     } catch (error) {
         res.status(500).json({message: 'Server Error'})
     }
@@ -31,23 +32,23 @@ exports.addExpense = async (req, res) => {
     console.log(expense)
 }
 
-// ! To get all income from MongoDB -- using postman type:GET
-exports.getExpense = async (req, res) => {
+// ! To get all expense from MongoDB -- using postman type:GET
+exports.getExpenses = async (req, res) => {
     try {
-        const incomes = await IncomeModel.find().sort({createdAt: -1})
+        const incomes = await ExpenseModel.find().sort({createdAt: -1})
         res.status(200).json(incomes)
     } catch (error) {
         res.status(500).json({message: 'Server Error'})
     }
 }
 
-// ! To delete an income in the database -- using postman type:POST
+// ! To delete an expense in MongoDB -- using postman type:POST
 exports.deleteExpense = async (req, res) => {
     const { id } = req.params;
 
-    IncomeModel.findByIdAndDelete(id)
+    ExpenseModel.findByIdAndDelete(id)
         .then((income) => {
-            res.status(200).json({message: 'Income Deleted'})
+            res.status(200).json({message: 'Expense Deleted'})
         })
         .catch((err) => {
             res.status(500).json({message: 'Server Error'})
