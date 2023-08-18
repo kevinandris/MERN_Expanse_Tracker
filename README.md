@@ -6,6 +6,7 @@
 #   Project images:
     1) incomes
     2) expenses
+    3) Dashboard
 
 #   To start the application:
     1) Client side: npm start
