@@ -11,6 +11,7 @@
 ![expansetracker2](https://github.com/kevinandris/test/assets/102328858/790bcb09-2fc1-4ca0-87dd-3b0159591815)
 
     3) Dashboard
+![dashboard](https://github.com/kevinandris/test/assets/102328858/017079dd-f01f-4f86-b924-01716ad94a6f)
 
 #   To start the application:
     1) Client side: npm start
