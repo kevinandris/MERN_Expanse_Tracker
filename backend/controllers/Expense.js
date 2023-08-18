@@ -1,10 +1,10 @@
 const IncomeModel = require("../models/IncomeModel.js")
 
-// ! To create an income to MongoDB --  using postman type: POST
-exports.addIncome = async (req, res) => {
+// ! To create an expense to MongoDB --  using postman type: POST
+exports.addExpense = async (req, res) => {
     const { title, amount, category, description, date } = req.body
 
-    const income = IncomeModel({
+    const expense = IncomeModel({
         title,
         amount,
         category,
@@ -13,7 +13,7 @@ exports.addIncome = async (req, res) => {
     })
 
     try {
-        // ! if input is empty
+        // * if input is empty
         if (!title || !category || !description || !date ) {
             return res.status(400).json({message: 'All fields are required!'})
         }
@@ -22,19 +22,17 @@ exports.addIncome = async (req, res) => {
             return res.status(400).json({message: 'Amount must be a positive number!'})
         }
 
-        await income.save()
+        await expense.save()
         res.status(200).json({message: 'Income Added'})
     } catch (error) {
         res.status(500).json({message: 'Server Error'})
     }
 
-    console.log(income)
+    console.log(expense)
 }
 
-const IncomeSchema = require("../models/IncomeModel")
-
-// ! To get all income from MongoDB using postman
-exports.getIncomes = async (req, res) => {
+// ! To get all income from MongoDB -- using postman type:GET
+exports.getExpense = async (req, res) => {
     try {
         const incomes = await IncomeModel.find().sort({createdAt: -1})
         res.status(200).json(incomes)
@@ -44,7 +42,7 @@ exports.getIncomes = async (req, res) => {
 }
 
 // ! To delete an income in the database -- using postman type:POST
-exports.deleteIncome = async (req, res) => {
+exports.deleteExpense = async (req, res) => {
     const { id } = req.params;
 
     IncomeModel.findByIdAndDelete(id)
