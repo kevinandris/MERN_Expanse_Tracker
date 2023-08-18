@@ -3,6 +3,9 @@
     2) Detect's user's expanses and incomes using CRUD operation on each page.
     3) The data can be visualised in the graph chart, tracks user's recent history, minimum and maximum amount of incomes and expenses.
 
+#   Project images:
+    1) incomes
+
 #   To start the application:
     1) Client side: npm start
     2) Server side: npm start
