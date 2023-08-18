@@ -8,6 +8,8 @@
 ![expansetracker1](https://github.com/kevinandris/test/assets/102328858/e1ce91fb-962b-4405-a56a-8431b53eddb5)
     
     2) expenses
+![expansetracker2](https://github.com/kevinandris/test/assets/102328858/790bcb09-2fc1-4ca0-87dd-3b0159591815)
+
     3) Dashboard
 
 #   To start the application:
