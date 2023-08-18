@@ -13,3 +13,10 @@
     3) moment
     4) react-datepicker
     5) styled-components
+
+#   Backend dependencies installed:
+    1) cors
+    2) dotenv
+    3) express
+    4) mongoose
+    5) nodemon
