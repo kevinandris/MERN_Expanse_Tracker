@@ -30,3 +30,7 @@
     3) express
     4) mongoose
     5) nodemon
+
+#   Things to improve:
+    1) it is essential to installed all the necessary dependencies before start coding.
+    2) Do not be scared when errors occurs.
