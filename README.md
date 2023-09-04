@@ -1,7 +1,8 @@
 #   Project Description:
-    1) MERN stack -- MongoDV, Express, ReactJS, and NodeJS
+    1) MERN stack -- MongoDB, Express, ReactJS, and NodeJS
     2) Detect's user's expanses and incomes using CRUD operation on each page.
-    3) The data can be visualised in the graph chart, tracks user's recent history, minimum and maximum amount of incomes and expenses and total balance inside a storage.
+    3) The data can be visualised in the graph chart, tracks user's recent history, 
+       minimum and maximum amount of incomes and expenses and total balance inside a storage.
 
 #   Project images:
     1) incomes
@@ -33,4 +34,5 @@
 
 #   Things to improve:
     1) it is essential to installed all the necessary dependencies before start coding.
-    2) Do not be scared when errors occurs.
+    2) Pay attention more to the name of each class name so the code from css is working.
+    3) Do not be scared when errors occur please Kevinnnnn :).
