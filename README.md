@@ -33,7 +33,7 @@
     4) mongoose
     5) nodemon
 
-#   Things to improve:
-    1) it is essential to installed all the necessary dependencies before start coding.
+#   Own opinions for improvement:
+    1) I think it is better to install all the necessary dependencies before start coding.
     2) Pay attention more to the name of each class name so the code from css is working.
     3) Do not be scared when errors occur please Kevinnnnn :).
