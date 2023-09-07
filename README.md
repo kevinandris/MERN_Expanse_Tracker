@@ -3,7 +3,8 @@
     2) Detect's user's expanses and incomes using CRUD operation on each page.
     3) The data can be visualised in the graph chart, tracks user's recent history, 
        minimum and maximum amount of incomes and expenses and total balance inside a storage.
-    4) Styling is equipped with styled-components dependency of css.
+    4) Styling is equipped with styled-components dependency of css and each option's icon in 
+       the form is different.
 
 #   Project images:
     1) incomes
